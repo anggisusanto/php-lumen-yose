@@ -10,9 +10,8 @@ class PortofolioPingTest extends TestCase
     public function testPortofolio()
     {
         $this->visit('/')
-             ->see('Hello Yose')
-             ->see('id="ping-challenge-link"')
-             ->visit('/ping')
+             ->click('Portofolio Ping')
+             ->seePageIs('/ping')
              ->seeJson([
                 'alive' => true,
              ]);
